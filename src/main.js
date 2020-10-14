@@ -1,6 +1,3 @@
-// query selector variables go here 👇
-
-// we've provided you with some data to work with 👇
 var images = [
   "./assets/bees.jpg",
   "./assets/bridge.jpg",
@@ -102,15 +99,28 @@ var quotes = [
 var savedPosters = [];
 var currentPoster;
 
-// querySelectors go here:
+
+
+// query selector variables go here 👇
 var randomButton = document.querySelector(".show-random");
 var displayTitle = document.querySelector(".poster-title");
 var displayQuote = document.querySelector(".poster-quote");
 var displayImg = document.querySelector(".poster-img");
+var mainPoster = document.querySelector('.main-poster');
+var posterForm = document.querySelector('.poster-form');
+
+// we've provided you with some data to work with 👇\
+var savedPosters = [];
+var currentPoster;
+
+//buttons
+var makeNewButton = document.querySelector('.show-form');
+
 
 // event listeners go here 👇
 randomButton.addEventListener("click", generateRandomPoster);
-window.onload = generateRandomPoster();
+window.addEventListener('load', generateRandomPoster) ;
+makeNewButton.addEventListener('click', showCustomForm )
 
 // functions and event handlers go here 👇
 function generateRandomPoster() {
@@ -126,6 +136,12 @@ function changePoster(posterObject) {
   displayQuote.innerText = posterObject.quote;
   displayImg.src = posterObject.imageURL;
 }
+
+function showCustomForm() {
+  mainPoster.classList.add('hidden');
+  posterForm.classList.remove('hidden');
+}
+
 
 // (we've provided one for you to get you started)!
 function getRandomIndex(array) {
