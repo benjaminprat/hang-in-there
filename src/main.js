@@ -98,14 +98,36 @@ var quotes = [
   "Each person must live their life as a model for others.",
   "A champion is defined not by their wins but by how they can recover when they fall."
 ];
+
 var savedPosters = [];
 var currentPoster;
 
+// querySelectors go here:
+var randomButton = document.querySelector(".show-random");
+var displayTitle = document.querySelector(".poster-title");
+var displayQuote = document.querySelector(".poster-quote");
+var displayImg = document.querySelector(".poster-img");
+
 // event listeners go here 👇
+randomButton.addEventListener("click", generateRandomPoster);
+window.onload = generateRandomPoster();
 
 // functions and event handlers go here 👇
-// (we've provided one for you to get you started)!
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
+function generateRandomPoster() {
+  var randomImage = getRandomIndex(images);
+  var randomTitle = getRandomIndex(titles);
+  var randomQuote = getRandomIndex(quotes);
+  currentPoster = new Poster(randomImage, randomTitle, randomQuote);
+  changePoster(currentPoster);
 }
 
+function changePoster(posterObject) {
+  displayTitle.innerText = posterObject.title;
+  displayQuote.innerText = posterObject.quote;
+  displayImg.src = posterObject.imageURL;
+}
+
+// (we've provided one for you to get you started)!
+function getRandomIndex(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
