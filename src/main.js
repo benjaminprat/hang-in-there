@@ -6,6 +6,7 @@ var displayImg = document.querySelector('.poster-img');
 var mainPoster = document.querySelector('.main-poster');
 var posterForm = document.querySelector('.poster-form');
 var savedPostersSection = document.querySelector('.saved-posters');
+var savedPosterGrid = document.querySelector('.saved-posters-grid');
 
 
 // we've provided you with some data to work with 👇\
@@ -51,6 +52,7 @@ function showSavedPosters() {
   savedPostersSection.classList.remove('hidden');
   mainPoster.classList.add('hidden');
   posterForm.classList.add('hidden');
+  makeMiniPosters();
 }
 
 function showCustomForm() {
@@ -88,6 +90,18 @@ function saveToArray() {
     savedPosters.unshift(currentPoster);
   }
 }
+
+function makeMiniPosters() {
+  savedPosterGrid.innerHTML = '';
+  for (var i = 0; i < savedPosters.length; i++) {
+    var miniPoster = `<article class="mini-poster" id="${savedPosters[i].id}">
+                        <img src=${savedPosters[i].imageURL}>
+                        <h2>${savedPosters[i].title}</h2>
+                        <h4>${savedPosters[i].quote}</h4>
+                      </article>`;
+    savedPosterGrid.insertAdjacentHTML('beforeend', miniPoster);
+  }
+};
 
 // (we've provided one for you to get you started)!
 function getRandomIndex(array) {
