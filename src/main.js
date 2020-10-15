@@ -7,6 +7,7 @@ var mainPoster = document.querySelector('.main-poster');
 var posterForm = document.querySelector('.poster-form');
 var savedPostersSection = document.querySelector('.saved-posters');
 
+
 // we've provided you with some data to work with 👇\
 var savedPosters = [];
 var currentPoster;
@@ -18,6 +19,7 @@ var savedButton = document.querySelector('.show-saved');
 var takeBackButton = document.querySelector('.show-main');
 var backToMainButton = document.querySelector('.back-to-main');
 var customButton = document.querySelector('.make-poster');
+var savePosterButton = document.querySelector('.save-poster');
 
 
 // event listeners go here 👇
@@ -28,6 +30,7 @@ savedButton.addEventListener('click', showSavedPosters);
 takeBackButton.addEventListener('click', showMainPage);
 backToMainButton.addEventListener('click', showMainPage);
 customButton.addEventListener('click', makeCustomPoster);
+savePosterButton.addEventListener('click', saveToArray);
 
 // functions and event handlers go here 👇
 function generateRandomPoster() {
@@ -78,6 +81,10 @@ function saveData(posterObject) {
   images.push(posterObject.imageURL);
   titles.push(posterObject.title);
   quotes.push(posterObject.quote);
+}
+
+function saveToArray() {
+  savedPosters.push(currentPoster);
 }
 
 
