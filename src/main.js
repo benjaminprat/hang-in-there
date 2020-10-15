@@ -17,6 +17,7 @@ var makeNewButton = document.querySelector('.show-form');
 var savedButton = document.querySelector('.show-saved');
 var takeBackButton = document.querySelector('.show-main');
 var backToMainButton = document.querySelector('.back-to-main');
+var customButton = document.querySelector('.make-poster');
 
 
 // event listeners go here 👇
@@ -25,7 +26,8 @@ randomButton.addEventListener('click', generateRandomPoster);
 makeNewButton.addEventListener('click', showCustomForm );
 savedButton.addEventListener('click', showSavedPosters);
 takeBackButton.addEventListener('click', showMainPage);
-backToMainButton.addEventListener('click', displayMainPage)
+backToMainButton.addEventListener('click', displayMainPage);
+customButton.addEventListener('click', makeCustomPoster);
 
 // functions and event handlers go here 👇
 function generateRandomPoster() {
@@ -55,11 +57,29 @@ function showCustomForm() {
 function showMainPage() {
   mainPoster.classList.remove('hidden');
   savedPostersSection.classList.add('hidden');
+  posterForm.classList.add('hidden');
 }
 
 function displayMainPage() {
   mainPoster.classList.remove('hidden');
-  posterForm.classList.remove('hidden');
+  posterForm.classList.add('hidden');
+}
+
+function makeCustomPoster() {
+  customButton.setAttribute('type', 'button');
+  var customPosterUrl = document.getElementById('poster-image-url').value;
+  var customPosterTitle = document.getElementById('poster-title').value;
+  var customPosterQuote = document.getElementById('poster-quote').value;
+  var customPoster = new Poster(customPosterUrl, customPosterTitle, customPosterQuote);
+  showMainPage();
+  saveData(customPoster);
+  return changePoster(customPoster);
+}
+
+function saveData(posterObject) {
+  images.push(posterObject.imageURL);
+  titles.push(posterObject.title);
+  quotes.push(posterObject.quote);
 }
 
 
