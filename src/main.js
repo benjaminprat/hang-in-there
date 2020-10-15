@@ -59,7 +59,7 @@ function showCustomForm() {
 function showMainPage() {
   mainPoster.classList.remove('hidden');
   savedPostersSection.classList.add('hidden');
-  showMainPage.classList.add('hidden');
+  posterForm.classList.add('hidden');
 }
 
 
