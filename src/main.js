@@ -84,9 +84,10 @@ function saveData(posterObject) {
 }
 
 function saveToArray() {
-  savedPosters.push(currentPoster);
+  if (!savedPosters.includes(currentPoster)) {
+    savedPosters.unshift(currentPoster);
+  }
 }
-
 
 // (we've provided one for you to get you started)!
 function getRandomIndex(array) {
