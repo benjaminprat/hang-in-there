@@ -26,7 +26,7 @@ randomButton.addEventListener('click', generateRandomPoster);
 makeNewButton.addEventListener('click', showCustomForm );
 savedButton.addEventListener('click', showSavedPosters);
 takeBackButton.addEventListener('click', showMainPage);
-backToMainButton.addEventListener('click', displayMainPage);
+backToMainButton.addEventListener('click', showMainPage);
 customButton.addEventListener('click', makeCustomPoster);
 
 // functions and event handlers go here 👇
@@ -45,13 +45,15 @@ function changePoster(posterObject) {
 }
 
 function showSavedPosters() {
-  mainPoster.classList.add('hidden');
   savedPostersSection.classList.remove('hidden');
+  mainPoster.classList.add('hidden');
+  posterForm.classList.add('hidden');
 }
 
 function showCustomForm() {
-  mainPoster.classList.add('hidden');
   posterForm.classList.remove('hidden');
+  mainPoster.classList.add('hidden');
+  savedPostersSection.classList.add('hidden')
 }
 
 function showMainPage() {
@@ -60,10 +62,6 @@ function showMainPage() {
   posterForm.classList.add('hidden');
 }
 
-function displayMainPage() {
-  mainPoster.classList.remove('hidden');
-  posterForm.classList.add('hidden');
-}
 
 function makeCustomPoster() {
   customButton.setAttribute('type', 'button');
