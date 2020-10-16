@@ -112,9 +112,9 @@ function getRandomIndex(array) {
 }
 
 //Iteration 4 work:
-var allImages = document.querySelectorAll('section.mini-poster');
+
 function updateSaved() {
-  allImages = document.querySelectorAll('section.mini-poster');
+  var allImages = document.querySelectorAll('section.mini-poster');
   for (var i = 0; i < allImages.length; i++) {
     allImages[i].addEventListener('dblclick', removePoster);
   }
