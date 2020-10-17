@@ -73,10 +73,10 @@ function makeCustomPoster() {
   var customPosterUrl = document.getElementById('poster-image-url').value;
   var customPosterTitle = document.getElementById('poster-title').value;
   var customPosterQuote = document.getElementById('poster-quote').value;
-  var customPoster = new Poster(customPosterUrl, customPosterTitle, customPosterQuote);
+  currentPoster = new Poster(customPosterUrl, customPosterTitle, customPosterQuote);
   showMainPage();
-  saveData(customPoster);
-  return changePoster(customPoster);
+  saveData(currentPoster);
+  return changePoster(currentPoster);
 }
 
 function saveData(posterObject) {
