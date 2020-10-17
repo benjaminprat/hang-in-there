@@ -48,26 +48,31 @@ function changePoster(posterObject) {
   displayImg.src = posterObject.imageURL;
 }
 
+function displayOff() {
+  mainPoster.classList.add("hidden");
+  savedPostersSection.classList.add("hidden");
+  posterForm.classList.add("hidden");
+};
+
+
 function showSavedPosters() {
-  savedPostersSection.classList.remove('hidden');
-  mainPoster.classList.add('hidden');
-  posterForm.classList.add('hidden');
+  displayOff();
+  savedPostersSection.classList.toggle('hidden');
   makeMiniPosters();
   updateSaved();
 }
 
 function showCustomForm() {
-  posterForm.classList.remove('hidden');
-  mainPoster.classList.add('hidden');
-  savedPostersSection.classList.add('hidden')
+  displayOff();
+  posterForm.classList.toggle('hidden');
+
 }
 
 function showMainPage() {
-  mainPoster.classList.remove('hidden');
-  savedPostersSection.classList.add('hidden');
-  posterForm.classList.add('hidden');
-}
+  displayOff();
+  mainPoster.classList.toggle('hidden');
 
+}
 
 function makeCustomPoster() {
   customButton.setAttribute('type', 'button');
