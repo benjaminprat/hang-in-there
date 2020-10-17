@@ -79,6 +79,10 @@ function makeCustomPoster() {
   var customPosterUrl = document.getElementById('poster-image-url').value;
   var customPosterTitle = document.getElementById('poster-title').value;
   var customPosterQuote = document.getElementById('poster-quote').value;
+
+  if (verifyForm(customPosterUrl, customPosterTitle, customPosterQuote) === false) {
+    return alert('Input field cannot be empty.')
+  }
   currentPoster = new Poster(customPosterUrl, customPosterTitle, customPosterQuote);
   showMainPage();
   saveData(currentPoster);
@@ -121,6 +125,14 @@ function removePoster() {
    showSavedPosters();
 }
 
+// extensions
+
+
+function verifyForm(url, title, quote) {
+  if (url === "" || title === '' || quote === '') {
+    return false;
+  }
+}
 // (we've provided one for you to get you started)!
 function getRandomIndex(array) {
   return array[Math.floor(Math.random() * array.length)];
