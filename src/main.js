@@ -53,9 +53,7 @@ function showSavedPosters() {
   mainPoster.classList.add('hidden');
   posterForm.classList.add('hidden');
   makeMiniPosters();
-  //ADDITION
   updateSaved();
-  //ADDITION
 }
 
 function showCustomForm() {
@@ -106,13 +104,6 @@ function makeMiniPosters() {
   }
 };
 
-// (we've provided one for you to get you started)!
-function getRandomIndex(array) {
-  return array[Math.floor(Math.random() * array.length)];
-}
-
-//Iteration 4 work:
-
 function updateSaved() {
   var allImages = document.querySelectorAll('section.mini-poster');
   for (var i = 0; i < allImages.length; i++) {
@@ -123,4 +114,9 @@ function updateSaved() {
 function removePoster() {
    savedPosters.splice(this.tabIndex, 1);
    showSavedPosters();
+}
+
+// (we've provided one for you to get you started)!
+function getRandomIndex(array) {
+  return array[Math.floor(Math.random() * array.length)];
 }
