@@ -11,25 +11,26 @@ None. This project was developed on macOS Catalina 10.15.6 and tested in Chrome 
 
 ## Visuals
 
-<iframe src="https://giphy.com/embed/rX1BYlYzUf7LqAkAtP" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/rX1BYlYzUf7LqAkAtP">via GIPHY</a></p>
+![Hang In There Initial Stage](https://media.giphy.com/media/rX1BYlYzUf7LqAkAtP/giphy.gif "Hang In There Initial Stage")
+
 
 
 - When the page loads, the user will see a poster with a randomly selected image, title and quote.
 
-<iframe src="https://giphy.com/embed/YC7iPyAN1AV1iJrE8e" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/YC7iPyAN1AV1iJrE8e">via GIPHY</a></p>
+![Hang In There Switch Views](https://media.giphy.com/media/YC7iPyAN1AV1iJrE8e/giphy.gif "Hang In There Switch Views")
 
 -   When the  **Make Your Own Poster**  button is clicked, the form is shown and the main poster is hidden.
 -   When the  **View Saved Posters**  button is clicked, the saved posters area is shown and the main poster is hidden.
 -   When the  **Nevermind, take me back!** or  **Back to Main** buttons are clicked, only the main poster section is shown.
 
 
-<iframe src="https://giphy.com/embed/ApgZ6noR4d41jovcMR" width="480" height="266" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/ApgZ6noR4d41jovcMR">via GIPHY</a></p>
+![Hang In There Make New](https://media.giphy.com/media/ApgZ6noR4d41jovcMR/giphy.gif "Make new Poster")
 
 -   On the new poster form view, users can fill out the three input fields and  click the  **Save This Poster** button. The submitted data is saved so that future random posters can use the user-created data.
 -   The page view changes back to the main poster view.
 -   The newly created poster image, title and quote are displayed in the main view.
 
-<iframe src="https://giphy.com/embed/rGBolJI5RB3uKGZkmT" width="480" height="266" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/rGBolJI5RB3uKGZkmT">via GIPHY</a></p>
+![Hang In There Save](https://media.giphy.com/media/rGBolJI5RB3uKGZkmT/giphy.gif "Save Poster")
 
 -   When the user clicks the   **Save This Poster**  button the current main poster is added to the saved posters grid section.
 
@@ -38,11 +39,11 @@ None. This project was developed on macOS Catalina 10.15.6 and tested in Chrome 
 -   When the user clicks the   **Showed Saved Posters** button the saved poster section is displayed.
 
 
-<iframe src="https://giphy.com/embed/yltCf0iqgGNfaxadvw" width="480" height="266" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/yltCf0iqgGNfaxadvw">via GIPHY</a></p>
+![Hang In There Delete](https://media.giphy.com/media/yltCf0iqgGNfaxadvw/giphy.gif "Delete Poster")
 
 - In the saved posters view, if a user double clicks a saved poster, it will be deleted.
 
-<iframe src="https://giphy.com/embed/iBaAcaI5Wuu9R434LN" width="480" height="266" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/iBaAcaI5Wuu9R434LN">via GIPHY</a></p>
+![Hang In There Error](https://media.giphy.com/media/iBaAcaI5Wuu9R434LN/giphy.gif "Error Message")
 
 - In the new poster form view, an error message appears if the user does not complete all three inputs.
 
