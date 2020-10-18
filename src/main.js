@@ -125,15 +125,32 @@ function removePoster() {
    showSavedPosters();
 }
 
-// extensions
+function getRandomIndex(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
 
-
+// extension 1:
 function verifyForm(url, title, quote) {
   if (url === "" || title === '' || quote === '') {
     return false;
   }
 }
-// (we've provided one for you to get you started)!
-function getRandomIndex(array) {
-  return array[Math.floor(Math.random() * array.length)];
+
+//extension 2:
+displayTitle.addEventListener('click', replace);
+displayImg.addEventListener('click', replace);
+displayQuote.addEventListener('click', replace);
+
+function replace() {
+  if (this.classList.value === 'poster-title') {
+    var newTitle = getRandomIndex(titles);
+    currentPoster = new Poster(currentPoster.imageURL, newTitle, currentPoster.quote)
+  } else if (this.classList.value === 'poster-quote'){
+    var newQuote = getRandomIndex(quotes);
+    currentPoster = new Poster(currentPoster.imageURL, currentPoster.title, newQuote)
+  } else if (this.classList.value === 'poster-img') {
+    var newURL = getRandomIndex(images);
+    currentPoster = new Poster(newURL, currentPoster.title, currentPoster.quote)
+  }
+  changePoster(currentPoster)
 }
