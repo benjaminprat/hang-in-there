@@ -104,7 +104,7 @@ function saveToArray() {
 function makeMiniPosters() {
   savedPosterGrid.innerHTML = '';
   for (var i = 0; i < savedPosters.length; i++) {
-    var miniPoster = `<section class="mini-poster" id="${savedPosters[i].id}" tabindex=${i}>
+    var miniPoster = `<section class="mini-poster" id="${i}">
                         <img src=${savedPosters[i].imageURL}>
                         <h2>${savedPosters[i].title}</h2>
                         <h4>${savedPosters[i].quote}</h4>
@@ -121,7 +121,7 @@ function updateSaved() {
 }
 
 function removePoster() {
-   savedPosters.splice(this.tabIndex, 1);
+   savedPosters.splice(this.id, 1);
    showSavedPosters();
 }
 
@@ -137,7 +137,7 @@ function verifyForm(url, title, quote) {
 }
 
 //extension 2:
-displayTitle.addEventListener('click', replace;
+displayTitle.addEventListener('click', replace);
 displayImg.addEventListener('click', replace);
 displayQuote.addEventListener('click', replace);
 
