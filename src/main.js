@@ -137,7 +137,7 @@ function verifyForm(url, title, quote) {
 }
 
 //extension 2:
-displayTitle.addEventListener('click', replace);
+displayTitle.addEventListener('click', replace;
 displayImg.addEventListener('click', replace);
 displayQuote.addEventListener('click', replace);
 
