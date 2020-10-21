@@ -47,6 +47,11 @@ None. This project was developed on macOS Catalina 10.15.6 and tested in Chrome 
 
 - In the new poster form view, an error message appears if the user does not complete all three inputs.
 
+![Hang In There Poster Value](https://media.giphy.com/media/eGHnkxNoDIeQh7Xw9H/giphy.gif "Select Poster Values")
+
+- In the main poster view, users can click each piece of the poster (image, title, quote) to update just that piece with another random item from the appropriate category.
+
+
 ## Languages
 
 * Javascript
