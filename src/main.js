@@ -36,7 +36,7 @@ displayTitle.addEventListener('click', updateAPosterValue);
 displayImg.addEventListener('click', updateAPosterValue);
 displayQuote.addEventListener('click', updateAPosterValue);
 
-// functions and event handlers go here 👇
+
 function generateRandomPoster() {
   var randomImage = getRandomIndex(images);
   var randomTitle = getRandomIndex(titles);
@@ -78,7 +78,6 @@ function showMainPage() {
 }
 
 function makeCustomPoster() {
-  // customButton.setAttribute('type', 'button');
   event.preventDefault();
   var customPosterUrl = document.getElementById('poster-image-url').value;
   var customPosterTitle = document.getElementById('poster-title').value;
