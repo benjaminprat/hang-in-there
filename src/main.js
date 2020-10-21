@@ -138,15 +138,14 @@ function verifyForm(url, title, quote) {
 }
 
 function updateAPosterValue() {
-  if (this.classList.value === 'poster-title') {
-    var newTitle = getRandomIndex(titles);
-    currentPoster = new Poster(currentPoster.imageURL, newTitle, currentPoster.quote)
-  } else if (this.classList.value === 'poster-quote'){
-    var newQuote = getRandomIndex(quotes);
-    currentPoster = new Poster(currentPoster.imageURL, currentPoster.title, newQuote)
-  } else if (this.classList.value === 'poster-img') {
-    var newURL = getRandomIndex(images);
-    currentPoster = new Poster(newURL, currentPoster.title, currentPoster.quote)
+  var arguments = [currentPoster.imageURL, currentPoster.title, currentPoster.quote];
+  if (this.classList.value === 'poster-img') {
+    arguments[0] = getRandomIndex(images);
+  } else if (this.classList.value === 'poster-title'){
+    arguments[1] = getRandomIndex(titles);
+  } else if (this.classList.value === 'poster-quote') {
+    arguments[2] = getRandomIndex(quotes);
   }
-  changePoster(currentPoster)
+  currentPoster = new Poster(arguments[0], arguments[1], arguments[2]);
+  changePoster(currentPoster);
 }
