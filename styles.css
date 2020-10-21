@@ -55,11 +55,21 @@ button:hover {
   width: 800px;
 }
 
+.poster-img:hover {
+  cursor: pointer;
+  border: 3px solid white;
+}
+
 .poster-title,
 .poster-quote {
   color: white;
   line-height: 1;
   width: 90%;
+}
+
+.poster-title:hover,
+.poster-quote:hover {
+  cursor: pointer;
 }
 
 .poster-title {
@@ -123,6 +133,10 @@ button:hover {
   height: 340px;
   padding: 25px;
   width: 425px;
+}
+
+.mini-poster:hover {
+  cursor: pointer;
 }
 
 .mini-poster img {
